@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Event</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="navbar">
+  <div><strong>CollegeConnect</strong></div>
+  <div id="nav-links"></div>
+  <div><a href="index.html">Logout</a></div>
+</div>
+
+<div class="container">
+  <h2>Create Event</h2>
+
+  <form onsubmit="return saveEvent(event)">
+    <label>Event Name</label>
+    <input type="text" required>
+
+    <label>Description</label>
+    <textarea required></textarea>
+
+    <label>Team Size</label>
+    <input type="number" min="1" required>
+
+    <button type="submit">Save Event</button>
+  </form>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  function saveEvent(e) {
+    e.preventDefault();
+    alert("Event created successfully (Prototype Mode)");
+  }
+</script>
+
+</body>
+</html>

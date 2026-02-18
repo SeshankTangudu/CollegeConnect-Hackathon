@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CollegeConnect Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>CollegeConnect Login</h2>
+
+  <form onsubmit="return handleLogin(event)">
+    <label>Login As</label>
+    <select id="role">
+      <option value="student">Student</option>
+      <option value="admin">Admin</option>
+      <option value="superadmin">Super Admin</option>
+    </select>
+
+    <label>Email</label>
+    <input type="email" id="email" required>
+
+    <label>Password</label>
+    <input type="password" id="password" required>
+
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<script>
+  function handleLogin(e) {
+    e.preventDefault();
+    const role = document.getElementById("role").value;
+    sessionStorage.setItem("role", role);
+    window.location.href = "dashboard.html";
+  }
+</script>
+
+</body>
+</html>
